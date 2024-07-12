@@ -25,9 +25,9 @@ function Navbar({
       >
         <div className={"container-fluid "}>
           {/* Title */}
-          <a className={`navbar-brand ${modeSetup.textColor}`} href="/">
+          <Link className={`navbar-brand ${modeSetup.textColor}`} to="/">
             {title}
-          </a>
+          </Link>
 
           <button
             className="navbar-toggler"
@@ -43,18 +43,18 @@ function Navbar({
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a
+                <Link
                   className={"nav-link active " + modeSetup.textColor}
                   aria-current="page"
-                  href="#"
+                  to="/"
                 >
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className={`nav-link ${modeSetup.textColor}`} href="#">
+                <Link className={`nav-link ${modeSetup.textColor}`} to="/about">
                   {about}
-                </a>
+                </Link>
               </li>
             </ul>
 

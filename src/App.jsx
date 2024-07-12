@@ -4,7 +4,7 @@ import Navbar from "./Components/Navbar";
 import TextForm from "./Components/TextForm";
 import Alert from "./Components/Alert";
 import About from "./Components/About";
-// import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { useState } from "react";
 
 function App() {
@@ -31,20 +31,34 @@ function App() {
   };
 
   return (
-    <>
-      <Navbar
-        title="JackMa"
-        about="About him"
-        mode={darkMode}
-        toggleDarkMode={toggleDarkMode}
-      />
+    <Router>
+      <>
+        <Navbar
+          title="JackMa"
+          about="About him"
+          mode={darkMode}
+          toggleDarkMode={toggleDarkMode}
+        />
 
-      <Alert alert={alert} />
+        <Alert alert={alert} />
 
-      <div className="container my-3">
-        <TextForm showAlert={showAlert} heading="Enter some text here" />
-      </div>
-    </>
+        <div className="container my-3">
+          <Routes>
+            <Route
+              exact
+              path="/"
+              element={
+                <TextForm
+                  heading={"Enter text to analyze"}
+                  showAlert={showAlert}
+                />
+              }
+            />
+            <Route path="/about" element={<About />} />
+          </Routes>
+        </div>
+      </>
+    </Router>
   );
 }
 

@@ -50,16 +50,16 @@ function TextForm({ heading, showAlert }) {
           ></textarea>
         </div>
 
-        <button className="btn btn-primary mx-1" onClick={handleUpper}>
+        <button className="btn btn-primary mx-1 my-1" onClick={handleUpper}>
           Convert to Uppercase
         </button>
-        <button className="btn btn-primary  mx-1" onClick={handleRevert}>
+        <button className="btn btn-primary mx-1 my-1" onClick={handleRevert}>
           Revert back
         </button>
-        <button className="btn btn-primary  mx-1" onClick={handleClearText}>
+        <button className="btn btn-primary mx-1 my-1" onClick={handleClearText}>
           Clear text
         </button>
-        <button className="btn btn-primary  mx-1" onClick={handleCopy}>
+        <button className="btn btn-primary mx-1 my-1" onClick={handleCopy}>
           Copy text
         </button>
       </div>
